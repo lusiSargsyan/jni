@@ -178,7 +178,7 @@ int main(){
     jclass cls = env->FindClass( "TestJni");
      if(cls !=0)                                                     
      {
-         jstring jstr = (env)->NewStringUTF("https://www.monitis.com/");
+         jstring jstr = (env)->NewStringUTF("https://github.com/");
          jmethodID mid = env->GetStaticMethodID(cls, "getResult", "(Ljava/lang/String;)Ljava/lang/String;");
         if(mid != 0){
            jstring rv = (jstring) env->CallStaticObjectMethod(cls, mid,jstr);
@@ -210,4 +210,4 @@ Run executable file
 
 As a result we will get a message in C++ console 
 
-Requested page https://www.monitis.com/ was opened
+Requested page https://github.com/ was opened
